@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.1
+- The room of the "Scenes of a room" tile is a list to choose from (every room of the house) instead of a text.
+
 ## 0.3.0
 - New tile "Scenes of a room": type a room (as the Hue app names it) and the tile shows its scenes as a grid, each on
   a gradient of its own colours, the name in white on it; a tap starts the scene. The option Scenes names and orders

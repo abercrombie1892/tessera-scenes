@@ -2,7 +2,7 @@
 # colours of the scene (from the Hue bridge, kept in the plugin by the scene's entity id) or of the light. A tap starts
 # the scene or switches the light.
 id: tessera_scenes
-version: 0.3.0
+version: 0.3.1
 api: "0.8"
 icon: lightbulb
 maintainer: abercrombie1892
@@ -41,5 +41,10 @@ tiles:
     memory: 2600
     example: room_example
     options:
-      - { id: room, kind: text, label: room, hint: room_hint }
+      - id: room
+        kind: choice
+        label: room
+        hint: room_hint
+        default: Küche
+        choices: [{ value: "Deckenlampe Küche", label: room_deckenlampe_kuche }, { value: "Emma", label: room_emma }, { value: "Fernseher", label: room_fernseher }, { value: "Gaming", label: room_gaming }, { value: "Gästebad", label: room_gastebad }, { value: "Kinderzimmer", label: room_kinderzimmer }, { value: "Kinderzimmer Emma", label: room_kinderzimmer_emma }, { value: "Kinderzimmer Pepe", label: room_kinderzimmer_pepe }, { value: "Kreativ", label: room_kreativ }, { value: "Küche", label: room_kuche }, { value: "Mancave", label: room_mancave }, { value: "Pepe", label: room_pepe }, { value: "Schlafzimmer", label: room_schlafzimmer }, { value: "Sideboard", label: room_sideboard }, { value: "Wohnbereich", label: room_wohnbereich }, { value: "Wohnzimmer", label: room_wohnzimmer }]
       - { id: scenes, kind: text, label: scenes, hint: scenes_hint }
