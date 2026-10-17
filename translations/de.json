@@ -4,7 +4,9 @@
   },
   "screen": {
     "on": "An",
-    "off": "Aus"
+    "off": "Aus",
+    "no_room": "Gib einen Raum ein, zum Beispiel Küche",
+    "unknown_room": "Keine Szenen für"
   },
   "app": {
     "name": "Scenes",
@@ -13,7 +15,11 @@
     "scene_example": "Miami",
     "colors": "Eigene Farben",
     "colors_hint": "Leer: die Farben der Szene (aus der Hue Bridge) oder der Lampe. Sonst bis zu drei Farben als #RRGGBB, mit Komma getrennt: #3848FE, #FE6EBC.",
-    "named_name": "Szene (nach Name)",
-    "named_example": "Miami"
+    "room_name": "Szenen eines Raums",
+    "room_example": "Küche",
+    "room": "Raum",
+    "room_hint": "Der Raum, wie ihn die Hue-App nennt: Küche, Wohnzimmer, Kinderzimmer Pepe, Schlafzimmer, Gästebad …",
+    "scenes": "Szenen (optional)",
+    "scenes_hint": "Leer: alle Szenen des Raums nach Namen. Sonst die Namen in deiner Reihenfolge, mit Komma getrennt: Kochen, Hell, Gedimmt, Miami."
   }
 }

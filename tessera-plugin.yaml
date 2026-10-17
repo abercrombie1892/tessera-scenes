@@ -2,7 +2,7 @@
 # colours of the scene (from the Hue bridge, kept in the plugin by the scene's entity id) or of the light. A tap starts
 # the scene or switches the light.
 id: tessera_scenes
-version: 0.2.1
+version: 0.3.0
 api: "0.8"
 icon: lightbulb
 maintainer: abercrombie1892
@@ -32,10 +32,14 @@ tiles:
     options:
       - { id: colors, kind: text, label: colors, hint: colors_hint }
 
-  # A scene picked by its name: no entity to choose, the name ("Miami") is the key into the plugin's table of scenes.
-  - id: named
-    name: named_name
+  # The scenes of a room as a grid, each on a gradient of its own colours: the room is typed in, the scenes may be
+  # named and ordered, else every scene of the room is there.
+  - id: room
+    name: room_name
     icon: lightbulb
-    sizes: { min: 1x1, max: 4x4 }
-    memory: 900
-    example: named_example
+    sizes: { min: 2x1, max: 6x6 }
+    memory: 2600
+    example: room_example
+    options:
+      - { id: room, kind: text, label: room, hint: room_hint }
+      - { id: scenes, kind: text, label: scenes, hint: scenes_hint }

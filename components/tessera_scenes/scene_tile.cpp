@@ -37,42 +37,16 @@ std::vector<uint32_t> parse_colors(const std::string &text) {
   return colors;
 }
 
-// A scene without a colour of its own: two hues from its name, always the same ones.
-std::vector<uint32_t> colors_from_name(const std::string &entity) {
-  uint32_t h = 2166136261u;  // FNV-1a
-  for (unsigned char c : entity) h = (h ^ c) * 16777619u;
-  const float hue = (h % 360) / 360.0f, hue2 = std::fmod(hue + 0.12f + ((h >> 9) % 10) / 100.0f, 1.0f);
-  const auto rgb = [](float hh) {
-    const float r = std::clamp(std::fabs(hh * 6 - 3) - 1, 0.0f, 1.0f), g = std::clamp(2 - std::fabs(hh * 6 - 2), 0.0f, 1.0f),
-                b = std::clamp(2 - std::fabs(hh * 6 - 4), 0.0f, 1.0f);
-    return ((uint32_t) (255 * (0.35f + 0.65f * r)) << 16) | ((uint32_t) (255 * (0.35f + 0.65f * g)) << 8) |
-           (uint32_t) (255 * (0.35f + 0.65f * b));
-  };
-  return {rgb(hue), rgb(hue2)};
-}
-
 void text_color(lv_obj_t *label, uint32_t color) {
   if (!lv_color_eq(lv_obj_get_style_text_color(label, LV_PART_MAIN), lv_color_hex(color)))
     lv_obj_set_style_text_color(label, lv_color_hex(color), 0);
-}
-
-// The entity of the scene a name stands for ("Miami", any case), "" when the plugin has no such scene.
-std::string scene_named(const std::string &name) {
-  const auto lower = [](std::string text) {
-    for (char &c : text) c = (char) tolower((unsigned char) c);
-    return text;
-  };
-  const std::string wanted = lower(name);
-  for (const SceneColors &s : SCENE_COLORS)
-    if (lower(s.name) == wanted) return s.entity;
-  return "";
 }
 
 }  // namespace
 
 class SceneTile : public tessera::Tile {
  public:
-  SceneTile(TesseraScenes *plugin, bool named) : plugin_(plugin), named_(named) {}
+  explicit SceneTile(TesseraScenes *plugin) : plugin_(plugin) {}
   ~SceneTile() override {
     if (ground_px_ == nullptr) return;
     if (card_ != nullptr && lv_obj_is_valid(card_)) lv_obj_set_style_bg_image_src(card_, nullptr, 0);
@@ -85,7 +59,6 @@ class SceneTile : public tessera::Tile {
     entity_ = c.entity != nullptr ? c.entity : "";
     name_ = c.name != nullptr ? c.name : "";
     custom_ = parse_colors(c.options["colors"] | "");
-    if (named_) entity_ = scene_named(name_);
     light_ = entity_.rfind("light.", 0) == 0;
     width_ = c.width;
     height_ = c.height;
@@ -153,7 +126,6 @@ class SceneTile : public tessera::Tile {
     if (!custom_.empty()) return custom_;
     for (const SceneColors &s : SCENE_COLORS)
       if (entity_ == s.entity) return std::vector<uint32_t>(s.colors, s.colors + s.count);
-    if (named_ && entity_.empty()) return {0x6B7C99, 0x3A4560};  // a name the plugin does not know
     if (light_ && light_color_ != 0) return {light_color_};
     if (light_) return {0xFFB060};  // a light without a colour: warm white
     return colors_from_name(entity_);
@@ -195,22 +167,7 @@ class SceneTile : public tessera::Tile {
       ground_cap_ = ground_px_ == nullptr ? 0 : bytes;
       if (ground_px_ == nullptr) return false;
     }
-    std::vector<lv_color_t> stops;
-    if (colors.size() == 1) {
-      stops = {lit(colors[0], 150), lit(colors[0], 62)};  // one colour: light to dark
-    } else {
-      for (size_t i = 0; i < colors.size(); i++) stops.push_back(lit(colors[i], i + 1 == colors.size() ? 105 : 140));
-    }
-    const int last = (int) stops.size() - 1;
-    dither(reinterpret_cast<uint16_t *>(ground_px_), w, h, [&](int x, int y, float *want) {
-      const float t = std::min(1.0f, 0.55f * y / std::max(1, h - 1) + 0.45f * x / std::max(1, w - 1));
-      const float pos = t * last;
-      const int i = std::min(last - 1, (int) pos);
-      const float f = pos - i;
-      want[0] = stops[i].red + (stops[i + 1].red - stops[i].red) * f;
-      want[1] = stops[i].green + (stops[i + 1].green - stops[i].green) * f;
-      want[2] = stops[i].blue + (stops[i + 1].blue - stops[i].blue) * f;
-    });
+    gradient(reinterpret_cast<uint16_t *>(ground_px_), w, h, colors);
     lv_image_cache_drop(&ground_);
     ground_.header.magic = LV_IMAGE_HEADER_MAGIC;
     ground_.header.cf = LV_COLOR_FORMAT_RGB565;
@@ -223,7 +180,6 @@ class SceneTile : public tessera::Tile {
   }
 
   TesseraScenes *plugin_;
-  bool named_;
   bool large_{false};
   int width_{0}, height_{0};
   lv_obj_t *card_{}, *title_{}, *state_{};
@@ -237,6 +193,6 @@ class SceneTile : public tessera::Tile {
   size_t ground_cap_{0};
 };
 
-tessera::Tile *make_scene_tile(TesseraScenes *plugin, bool named) { return new SceneTile(plugin, named); }
+tessera::Tile *make_scene_tile(TesseraScenes *plugin) { return new SceneTile(plugin); }
 
 }  // namespace esphome::tessera_scenes

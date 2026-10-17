@@ -4,7 +4,9 @@
   },
   "screen": {
     "on": "On",
-    "off": "Off"
+    "off": "Off",
+    "no_room": "Type a room, for example Küche",
+    "unknown_room": "No scenes for"
   },
   "app": {
     "name": "Scenes",
@@ -13,7 +15,11 @@
     "scene_example": "Miami",
     "colors": "Own colours",
     "colors_hint": "Empty: the colours of the scene (from the Hue bridge) or of the light. Otherwise up to three colours as #RRGGBB, separated by commas: #3848FE, #FE6EBC.",
-    "named_name": "Scene (by name)",
-    "named_example": "Miami"
+    "room_name": "Scenes of a room",
+    "room_example": "Küche",
+    "room": "Room",
+    "room_hint": "The room as the Hue app names it: Küche, Wohnzimmer, Kinderzimmer Pepe, Schlafzimmer, Gästebad …",
+    "scenes": "Scenes (optional)",
+    "scenes_hint": "Empty: every scene of the room by name. Otherwise the names in your order, separated by commas: Kochen, Hell, Gedimmt, Miami."
   }
 }

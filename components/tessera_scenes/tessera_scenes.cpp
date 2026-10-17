@@ -4,8 +4,8 @@
 namespace esphome::tessera_scenes {
 
 void TesseraScenes::setup() {
-  add_tile("scene", [this]() { return make_scene_tile(this, false); });
-  add_tile("named", [this]() { return make_scene_tile(this, true); });
+  add_tile("scene", [this]() { return make_scene_tile(this); });
+  add_tile("room", [this]() { return make_scene_grid(this); });
 }
 
 }  // namespace esphome::tessera_scenes

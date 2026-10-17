@@ -46,4 +46,39 @@ template <class Want> inline void dither(uint16_t *pixels, int w, int h, Want wa
   }
 }
 
+// A scene without a colour of its own: two hues from its entity id, always the same ones.
+inline std::vector<uint32_t> colors_from_name(const std::string &entity) {
+  uint32_t h = 2166136261u;  // FNV-1a
+  for (unsigned char c : entity) h = (h ^ c) * 16777619u;
+  const float hue = (h % 360) / 360.0f, hue2 = std::fmod(hue + 0.12f + ((h >> 9) % 10) / 100.0f, 1.0f);
+  const auto rgb = [](float hh) {
+    const float r = std::clamp(std::fabs(hh * 6 - 3) - 1, 0.0f, 1.0f), g = std::clamp(2 - std::fabs(hh * 6 - 2), 0.0f, 1.0f),
+                b = std::clamp(2 - std::fabs(hh * 6 - 4), 0.0f, 1.0f);
+    return ((uint32_t) (255 * (0.35f + 0.65f * r)) << 16) | ((uint32_t) (255 * (0.35f + 0.65f * g)) << 8) |
+           (uint32_t) (255 * (0.35f + 0.65f * b));
+  };
+  return {rgb(hue), rgb(hue2)};
+}
+
+// The gradient from the top left to the foot right through the colours, each as a lit ground for white words (one
+// colour: light to dark), dithered into RGB565.
+inline void gradient(uint16_t *pixels, int w, int h, const std::vector<uint32_t> &colors) {
+  std::vector<lv_color_t> stops;
+  if (colors.size() == 1) {
+    stops = {lit(colors[0], 150), lit(colors[0], 62)};
+  } else {
+    for (size_t i = 0; i < colors.size(); i++) stops.push_back(lit(colors[i], i + 1 == colors.size() ? 105 : 140));
+  }
+  const int last = (int) stops.size() - 1;
+  dither(pixels, w, h, [&](int x, int y, float *want) {
+    const float t = std::min(1.0f, 0.55f * y / std::max(1, h - 1) + 0.45f * x / std::max(1, w - 1));
+    const float pos = t * last;
+    const int i = std::min(last - 1, (int) pos);
+    const float f = pos - i;
+    want[0] = stops[i].red + (stops[i + 1].red - stops[i].red) * f;
+    want[1] = stops[i].green + (stops[i + 1].green - stops[i].green) * f;
+    want[2] = stops[i].blue + (stops[i + 1].blue - stops[i].blue) * f;
+  });
+}
+
 }  // namespace esphome::tessera_scenes

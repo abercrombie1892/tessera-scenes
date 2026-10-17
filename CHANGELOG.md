@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0
+- New tile "Scenes of a room": type a room (as the Hue app names it) and the tile shows its scenes as a grid, each on
+  a gradient of its own colours, the name in white on it; a tap starts the scene. The option Scenes names and orders
+  them ("Kochen, Hell, Miami"), else every scene of the room is there. The table holds the 148 scenes of the house,
+  110 of them with the colours of the Hue bridge.
+- The tile "Scene by name" of 0.2.0 is gone: Home Assistant's events cannot place a plugin tile anyway.
+
 ## 0.2.1
 - The name on a tile is as large as the tile's width takes it, a step smaller for a long one ("Tropendämmerung"
   on a small tile).
