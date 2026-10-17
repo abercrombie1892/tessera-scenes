@@ -12,6 +12,8 @@
     "scene_name": "Szene / Licht",
     "scene_example": "Miami",
     "colors": "Eigene Farben",
-    "colors_hint": "Leer: die Farben der Szene (aus der Hue Bridge) oder der Lampe. Sonst bis zu drei Farben als #RRGGBB, mit Komma getrennt: #3848FE, #FE6EBC."
+    "colors_hint": "Leer: die Farben der Szene (aus der Hue Bridge) oder der Lampe. Sonst bis zu drei Farben als #RRGGBB, mit Komma getrennt: #3848FE, #FE6EBC.",
+    "named_name": "Szene (nach Name)",
+    "named_example": "Miami"
   }
 }

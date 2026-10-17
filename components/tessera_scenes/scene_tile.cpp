@@ -56,11 +56,23 @@ void text_color(lv_obj_t *label, uint32_t color) {
     lv_obj_set_style_text_color(label, lv_color_hex(color), 0);
 }
 
+// The entity of the scene a name stands for ("Miami", any case), "" when the plugin has no such scene.
+std::string scene_named(const std::string &name) {
+  const auto lower = [](std::string text) {
+    for (char &c : text) c = (char) tolower((unsigned char) c);
+    return text;
+  };
+  const std::string wanted = lower(name);
+  for (const SceneColors &s : SCENE_COLORS)
+    if (lower(s.name) == wanted) return s.entity;
+  return "";
+}
+
 }  // namespace
 
 class SceneTile : public tessera::Tile {
  public:
-  explicit SceneTile(TesseraScenes *plugin) : plugin_(plugin) {}
+  SceneTile(TesseraScenes *plugin, bool named) : plugin_(plugin), named_(named) {}
   ~SceneTile() override {
     if (ground_px_ == nullptr) return;
     if (card_ != nullptr && lv_obj_is_valid(card_)) lv_obj_set_style_bg_image_src(card_, nullptr, 0);
@@ -73,6 +85,7 @@ class SceneTile : public tessera::Tile {
     entity_ = c.entity != nullptr ? c.entity : "";
     name_ = c.name != nullptr ? c.name : "";
     custom_ = parse_colors(c.options["colors"] | "");
+    if (named_) entity_ = scene_named(name_);
     light_ = entity_.rfind("light.", 0) == 0;
     const bool large = c.height >= ui::mm(24);
     const Font font = large ? Font::TITLE : Font::BODY_LARGE;
@@ -129,6 +142,7 @@ class SceneTile : public tessera::Tile {
     if (!custom_.empty()) return custom_;
     for (const SceneColors &s : SCENE_COLORS)
       if (entity_ == s.entity) return std::vector<uint32_t>(s.colors, s.colors + s.count);
+    if (named_ && entity_.empty()) return {0x6B7C99, 0x3A4560};  // a name the plugin does not know
     if (light_ && light_color_ != 0) return {light_color_};
     if (light_) return {0xFFB060};  // a light without a colour: warm white
     return colors_from_name(entity_);
@@ -198,6 +212,7 @@ class SceneTile : public tessera::Tile {
   }
 
   TesseraScenes *plugin_;
+  bool named_;
   lv_obj_t *card_{}, *title_{}, *state_{};
   std::string entity_, name_;
   std::vector<uint32_t> custom_;
@@ -209,6 +224,6 @@ class SceneTile : public tessera::Tile {
   size_t ground_cap_{0};
 };
 
-tessera::Tile *make_scene_tile(TesseraScenes *plugin) { return new SceneTile(plugin); }
+tessera::Tile *make_scene_tile(TesseraScenes *plugin, bool named) { return new SceneTile(plugin, named); }
 
 }  // namespace esphome::tessera_scenes
