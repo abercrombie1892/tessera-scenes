@@ -4,9 +4,7 @@
   },
   "screen": {
     "on": "On",
-    "off": "Off",
-    "no_room": "Type a room, for example Küche",
-    "unknown_room": "No scenes for"
+    "off": "Off"
   },
   "app": {
     "name": "Scenes",
@@ -14,28 +12,6 @@
     "scene_name": "Scene / Light",
     "scene_example": "Miami",
     "colors": "Own colours",
-    "colors_hint": "Empty: the colours of the scene (from the Hue bridge) or of the light. Otherwise up to three colours as #RRGGBB, separated by commas: #3848FE, #FE6EBC.",
-    "room_name": "Scenes of a room",
-    "room_example": "Küche",
-    "room": "Room",
-    "room_hint": "The scenes of this room appear on the screen as a grid (the editor does not show them). The rooms are named as in the Hue app.",
-    "scenes": "Scenes (optional)",
-    "scenes_hint": "Empty: every scene of the room by name. Otherwise the names in your order, separated by commas: Kochen, Hell, Gedimmt, Miami.",
-    "room_deckenlampe_kuche": "Deckenlampe Küche",
-    "room_emma": "Emma",
-    "room_fernseher": "Fernseher",
-    "room_gaming": "Gaming",
-    "room_gastebad": "Gästebad",
-    "room_kinderzimmer": "Kinderzimmer",
-    "room_kinderzimmer_emma": "Kinderzimmer Emma",
-    "room_kinderzimmer_pepe": "Kinderzimmer Pepe",
-    "room_kreativ": "Kreativ",
-    "room_kuche": "Küche",
-    "room_mancave": "Mancave",
-    "room_pepe": "Pepe",
-    "room_schlafzimmer": "Schlafzimmer",
-    "room_sideboard": "Sideboard",
-    "room_wohnbereich": "Wohnbereich",
-    "room_wohnzimmer": "Wohnzimmer"
+    "colors_hint": "Empty: the colours of the scene (from the Hue bridge) or of the light. Otherwise up to three colours as #RRGGBB, separated by commas: #3848FE, #FE6EBC."
   }
 }

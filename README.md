@@ -7,7 +7,7 @@ work.
 ## Set up
 
 1. In Tessera, Plugins, add this repository by its link and choose your screen. The screen builds once.
-2. In Layout, choose a scene or a light as a tile and set its type to **Scene / Light** in the inspector.
+2. In Layout, add the tile **Scene / Light** from the library (search for it) and choose the scene or the light under Entity.
 3. Optional: "Own colours" takes up to three colours as `#RRGGBB`, separated by commas.
 
 ## Good to know

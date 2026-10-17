@@ -60,6 +60,10 @@ class SceneTile : public tessera::Tile {
     name_ = c.name != nullptr ? c.name : "";
     custom_ = parse_colors(c.options["colors"] | "");
     light_ = entity_.rfind("light.", 0) == 0;
+    // A scene the plugin knows is called by its short name ("Miami"), not Home Assistant's ("Hauptlicht Hue Miami").
+    if (name_.empty())
+      for (const SceneColors &scene : SCENE_COLORS)
+        if (entity_ == scene.entity) name_ = scene.name;
     width_ = c.width;
     height_ = c.height;
     large_ = c.height >= ui::mm(24);

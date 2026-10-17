@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0
+- One tile again: the "Scenes of a room" grid of 0.3.x is gone. The plugin has the tile "Scene / Light" only.
+
+## 0.3.2
+- The tile "Scene / Light" calls a scene it knows by its short name ("Miami") instead of Home Assistant's own
+  ("Hauptlicht Hue Miami"), unless the tile has a name of its own.
+
 ## 0.3.1
 - The room of the "Scenes of a room" tile is a list to choose from (every room of the house) instead of a text.
 
