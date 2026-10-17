@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+- The name on a tile is as large as the tile's width takes it, a step smaller for a long one ("Tropendämmerung"
+  on a small tile).
+
 ## 0.2.0
 - New tile "Scene (by name)": no entity to choose, the name of the tile ("Miami", "Wald 2") picks the scene from the
   plugin's table. Tiles of it can be placed from Home Assistant events, which cannot set a plugin tile's entity.

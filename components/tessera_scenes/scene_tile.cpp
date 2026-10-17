@@ -87,16 +87,16 @@ class SceneTile : public tessera::Tile {
     custom_ = parse_colors(c.options["colors"] | "");
     if (named_) entity_ = scene_named(name_);
     light_ = entity_.rfind("light.", 0) == 0;
-    const bool large = c.height >= ui::mm(24);
-    const Font font = large ? Font::TITLE : Font::BODY_LARGE;
+    width_ = c.width;
+    height_ = c.height;
+    large_ = c.height >= ui::mm(24);
+    const Font font = large_ ? Font::TITLE : Font::BODY_LARGE;
 
     state_ = ui::label(c.parent, Font::BODY, theme::INK);
     lv_obj_set_pos(state_, ui::px(2), ui::px(2));
     lv_obj_set_size(state_, c.width - ui::px(4), ui::line_height(Font::BODY));
     title_ = ui::label(c.parent, font, theme::INK);
-    lv_obj_set_pos(title_, ui::px(2), c.height - ui::line_height(font) - ui::px(2));
-    lv_obj_set_size(title_, c.width - ui::px(4), ui::line_height(font));
-    ui::set_text(title_, name_);
+    show_name_(name_);
     paint_();
   }
 
@@ -109,10 +109,7 @@ class SceneTile : public tessera::Tile {
     JsonArrayConst rgb = data["attributes"]["rgb_color"];
     if (!rgb.isNull() && rgb.size() == 3)
       light_color_ = ((uint32_t) (int) rgb[0] << 16) | ((uint32_t) (int) rgb[1] << 8) | (uint32_t) (int) rgb[2];
-    if (name_.empty()) {
-      const std::string name = data["name"] | "";
-      ui::set_text(title_, name);
-    }
+    if (name_.empty()) show_name_(data["name"] | "");
     ui::set_text(state_, state_text_());
     paint_();
   }
@@ -130,6 +127,20 @@ class SceneTile : public tessera::Tile {
   }
 
  protected:
+  // The name as large as the tile's width takes it: a step smaller for each that does not fit, at the foot of the tile.
+  void show_name_(const std::string &name) {
+    const Font steps[] = {Font::TITLE, Font::BODY_LARGE, Font::BODY};
+    Font font = steps[2];
+    for (int i = large_ ? 0 : 1; i < 3; i++) {
+      font = steps[i];
+      if (ui::text_width(name, font) <= width_ - ui::px(6)) break;
+    }
+    ui::set_font(title_, font);
+    lv_obj_set_pos(title_, ui::px(2), height_ - ui::line_height(font) - ui::px(2));
+    lv_obj_set_size(title_, width_ - ui::px(4), ui::line_height(font));
+    ui::set_text(title_, name);
+  }
+
   std::string state_text_() const {
     if (!light_) return "";
     if (!on_) return plugin_->text("off");
@@ -213,6 +224,8 @@ class SceneTile : public tessera::Tile {
 
   TesseraScenes *plugin_;
   bool named_;
+  bool large_{false};
+  int width_{0}, height_{0};
   lv_obj_t *card_{}, *title_{}, *state_{};
   std::string entity_, name_;
   std::vector<uint32_t> custom_;

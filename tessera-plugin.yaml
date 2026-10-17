@@ -2,7 +2,7 @@
 # colours of the scene (from the Hue bridge, kept in the plugin by the scene's entity id) or of the light. A tap starts
 # the scene or switches the light.
 id: tessera_scenes
-version: 0.2.0
+version: 0.2.1
 api: "0.8"
 icon: lightbulb
 maintainer: abercrombie1892
