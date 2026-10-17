@@ -1,0 +1,33 @@
+# Scenes and lights as tiles on a gradient of their own colours: the name in white on a soft, dithered ground in the
+# colours of the scene (from the Hue bridge, kept in the plugin by the scene's entity id) or of the light. A tap starts
+# the scene or switches the light.
+id: tessera_scenes
+version: 0.1.0
+api: "0.8"
+icon: lightbulb
+maintainer: abercrombie1892
+license: MIT
+stage: beta
+topics: [home]
+requires:
+  esphome: 2026.6.2
+  psram: true
+boards: [wavesharep4, jc8012p4a1, jc8012p4a1v2, jc8012p4a1v3]
+flash_kb: 40
+
+permissions:
+  # A tap on a scene tile starts the scene, on a light tile it switches the light.
+  home_assistant_actions: [scene.turn_on, light.toggle]
+
+tiles:
+  - id: scene
+    name: scene_name
+    icon: lightbulb
+    sizes: { min: 1x1, max: 4x4 }
+    memory: 900
+    domains: [scene, light]
+    attributes: [brightness, rgb_color]
+    example: scene_example
+    preview: { title: "{name}" }
+    options:
+      - { id: colors, kind: text, label: colors, hint: colors_hint }

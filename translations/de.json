@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "name": "Deutsch"
+  },
+  "screen": {
+    "on": "An",
+    "off": "Aus"
+  },
+  "app": {
+    "name": "Scenes",
+    "summary": "Szenen und Lampen als Kacheln auf einem Farbverlauf in ihren eigenen Farben.",
+    "scene_name": "Szene / Licht",
+    "scene_example": "Miami",
+    "colors": "Eigene Farben",
+    "colors_hint": "Leer: die Farben der Szene (aus der Hue Bridge) oder der Lampe. Sonst bis zu drei Farben als #RRGGBB, mit Komma getrennt: #3848FE, #FE6EBC."
+  }
+}

@@ -1,0 +1,11 @@
+# What tools/preview.py shows: a scene and a light, as Home Assistant would send them.
+tiles:
+  - tile: scene
+    name: Miami
+    entity: scene.kuche_miami
+  - tile: scene
+    name: Decke
+    entity: light.deckenlampe_kuche
+states:
+  scene.kuche_miami: { state: "2026-10-17T10:00:00+00:00", attributes: {} }
+  light.deckenlampe_kuche: { state: "on", attributes: { brightness: 200, rgb_color: [255, 170, 80] } }
