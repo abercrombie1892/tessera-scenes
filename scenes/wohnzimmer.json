@@ -1,0 +1,108 @@
+{
+ "items": [
+  {
+   "value": "scene.wohnzimmer_abschalten",
+   "label": "Abschalten"
+  },
+  {
+   "value": "scene.wohnzimmer_aufgehen",
+   "label": "Aufgehen"
+  },
+  {
+   "value": "scene.wohnzimmer_bernsteinblute",
+   "label": "Bernsteinblüte"
+  },
+  {
+   "value": "scene.wohnzimmer_besinnlich",
+   "label": "Besinnlich"
+  },
+  {
+   "value": "scene.wohnzimmer_blossom",
+   "label": "Blossom"
+  },
+  {
+   "value": "scene.wohnzimmer_die_farben_der_natur",
+   "label": "Die Farben Der Natur"
+  },
+  {
+   "value": "scene.wohnzimmer_disturbia",
+   "label": "Disturbia"
+  },
+  {
+   "value": "scene.wohnzimmer_energie_tanken",
+   "label": "Energie tanken"
+  },
+  {
+   "value": "scene.wohnzimmer_entspannen",
+   "label": "Entspannen"
+  },
+  {
+   "value": "scene.wohnzimmer_glanz",
+   "label": "Glanz"
+  },
+  {
+   "value": "scene.wohnzimmer_glanz_und_glamour",
+   "label": "Glanz und Glamour"
+  },
+  {
+   "value": "scene.wohnzimmer_goldene_stunden",
+   "label": "Goldene Stunden"
+  },
+  {
+   "value": "scene.wohnzimmer_herzliche_umarmung",
+   "label": "Herzliche Umarmung"
+  },
+  {
+   "value": "scene.wohnzimmer_konzentrieren",
+   "label": "Konzentrieren"
+  },
+  {
+   "value": "scene.wohnzimmer_lesen",
+   "label": "Lesen"
+  },
+  {
+   "value": "scene.wohnzimmer_memento",
+   "label": "Memento"
+  },
+  {
+   "value": "scene.wohnzimmer_marchenbuch",
+   "label": "Märchenbuch"
+  },
+  {
+   "value": "scene.wohnzimmer_nachtlicht",
+   "label": "Nachtlicht"
+  },
+  {
+   "value": "scene.wohnzimmer_nachts",
+   "label": "Nachts"
+  },
+  {
+   "value": "scene.wohnzimmer_naturliches_licht",
+   "label": "Naturliches Licht"
+  },
+  {
+   "value": "scene.wohnzimmer_ruhephase",
+   "label": "Ruhephase"
+  },
+  {
+   "value": "scene.wohnzimmer_schleierkraut",
+   "label": "Schleierkraut"
+  },
+  {
+   "value": "scene.wohnzimmer_schlafrig",
+   "label": "Schläfrig"
+  },
+  {
+   "value": "scene.wohnzimmer_suzuka",
+   "label": "Suzuka"
+  },
+  {
+   "value": "scene.wohnzimmer_vertraumter_sonnenuntergang",
+   "label": "Verträumter Sonnenuntergang"
+  },
+  {
+   "value": "scene.wohnzimmer_witching_hour",
+   "label": "Witching hour"
+  }
+ ]
+}

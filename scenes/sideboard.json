@@ -1,0 +1,16 @@
+{
+ "items": [
+  {
+   "value": "scene.sideboard_miami",
+   "label": "Miami"
+  },
+  {
+   "value": "scene.sideboard_tokio",
+   "label": "Tokio"
+  },
+  {
+   "value": "scene.sideboard_vertraumter_sonnenuntergang",
+   "label": "Verträumter Sonnenuntergang"
+  }
+ ]
+}

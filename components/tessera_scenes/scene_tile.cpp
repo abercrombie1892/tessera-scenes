@@ -56,7 +56,8 @@ class SceneTile : public tessera::Tile {
 
   void create(const tessera::TileContext &c) override {
     card_ = lv_obj_get_parent(c.parent);
-    entity_ = c.entity != nullptr ? c.entity : "";
+    entity_ = c.options["scene"] | "";  // the scene chosen under the room
+    if (entity_.empty() && c.entity != nullptr) entity_ = c.entity;
     name_ = c.name != nullptr ? c.name : "";
     custom_ = parse_colors(c.options["colors"] | "");
     light_ = entity_.rfind("light.", 0) == 0;

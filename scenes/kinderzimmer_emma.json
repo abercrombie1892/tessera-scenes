@@ -1,0 +1,20 @@
+{
+ "items": [
+  {
+   "value": "scene.kinderzimmer_emma_gedimmt",
+   "label": "Gedimmt"
+  },
+  {
+   "value": "scene.kinderzimmer_emma_miami",
+   "label": "Miami"
+  },
+  {
+   "value": "scene.kinderzimmer_emma_nordlichter",
+   "label": "Nordlichter"
+  },
+  {
+   "value": "scene.kinderzimmer_emma_suzuka",
+   "label": "Suzuka"
+  }
+ ]
+}

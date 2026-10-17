@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "value": "scene.gaming_gemuetlich",
+   "label": "Gemuetlich"
+  },
+  {
+   "value": "scene.gaming_ice",
+   "label": "Ice"
+  },
+  {
+   "value": "scene.gaming_lava",
+   "label": "Lava"
+  },
+  {
+   "value": "scene.gaming_matrix",
+   "label": "Matrix"
+  },
+  {
+   "value": "scene.gaming_midnight",
+   "label": "Midnight"
+  },
+  {
+   "value": "scene.gaming_neon",
+   "label": "Neon"
+  },
+  {
+   "value": "scene.gaming_party",
+   "label": "Party"
+  }
+ ]
+}

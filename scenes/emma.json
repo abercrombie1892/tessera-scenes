@@ -1,0 +1,28 @@
+{
+ "items": [
+  {
+   "value": "scene.emma_babyblau_wolke",
+   "label": "Babyblau Wolke"
+  },
+  {
+   "value": "scene.emma_einhorn_zauber",
+   "label": "Einhorn Zauber"
+  },
+  {
+   "value": "scene.emma_kuschelig",
+   "label": "Kuschelig"
+  },
+  {
+   "value": "scene.emma_rosa_traum",
+   "label": "Rosa Traum"
+  },
+  {
+   "value": "scene.emma_sternenstaub",
+   "label": "Sternenstaub"
+  },
+  {
+   "value": "scene.emma_zauberhimmel",
+   "label": "Zauberhimmel"
+  }
+ ]
+}

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0
+- The tile picks its scene in two steps: first the room (a list of every room of the house), then only the scenes of
+  that room. The list of scenes is a small file of this repository (`scenes/<room>.json`), fetched by the Tessera app.
+  The tile no longer asks for an entity; lamps have Tessera's own tiles with their sliders.
+
 ## 0.4.0
 - One tile again: the "Scenes of a room" grid of 0.3.x is gone. The plugin has the tile "Scene / Light" only.
 

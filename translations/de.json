@@ -2,16 +2,33 @@
   "_meta": {
     "name": "Deutsch"
   },
-  "screen": {
-    "on": "An",
-    "off": "Aus"
-  },
+  "screen": {},
   "app": {
     "name": "Scenes",
-    "summary": "Szenen und Lampen als Kacheln auf einem Farbverlauf in ihren eigenen Farben.",
+    "summary": "Szenen als Kacheln auf einem Farbverlauf in ihren eigenen Farben: erst der Raum, dann die Szene.",
     "scene_name": "Szene / Licht",
     "scene_example": "Miami",
     "colors": "Eigene Farben",
-    "colors_hint": "Leer: die Farben der Szene (aus der Hue Bridge) oder der Lampe. Sonst bis zu drei Farben als #RRGGBB, mit Komma getrennt: #3848FE, #FE6EBC."
+    "colors_hint": "Leer: die Farben der Szene (aus der Hue Bridge) oder der Lampe. Sonst bis zu drei Farben als #RRGGBB, mit Komma getrennt: #3848FE, #FE6EBC.",
+    "room_deckenlampe_kuche": "Deckenlampe Küche",
+    "room_emma": "Emma",
+    "room_fernseher": "Fernseher",
+    "room_gaming": "Gaming",
+    "room_gastebad": "Gästebad",
+    "room_kinderzimmer": "Kinderzimmer",
+    "room_kinderzimmer_emma": "Kinderzimmer Emma",
+    "room_kinderzimmer_pepe": "Kinderzimmer Pepe",
+    "room_kreativ": "Kreativ",
+    "room_kuche": "Küche",
+    "room_mancave": "Mancave",
+    "room_pepe": "Pepe",
+    "room_schlafzimmer": "Schlafzimmer",
+    "room_sideboard": "Sideboard",
+    "room_wohnbereich": "Wohnbereich",
+    "room_wohnzimmer": "Wohnzimmer",
+    "room": "Raum",
+    "room_hint": "Der Raum, wie ihn die Hue-App nennt. Darunter erscheinen nur die Szenen dieses Raums.",
+    "scene": "Szene",
+    "scene_hint": "Eine Szene des gewählten Raums. Ein Tipp auf die Kachel startet sie."
   }
 }

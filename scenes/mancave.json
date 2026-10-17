@@ -1,0 +1,44 @@
+{
+ "items": [
+  {
+   "value": "scene.mancave_arctic",
+   "label": "Arctic"
+  },
+  {
+   "value": "scene.mancave_candlelight",
+   "label": "Candlelight"
+  },
+  {
+   "value": "scene.mancave_cozy",
+   "label": "Cozy"
+  },
+  {
+   "value": "scene.mancave_daylight",
+   "label": "Daylight"
+  },
+  {
+   "value": "scene.mancave_fireplace",
+   "label": "Fireplace"
+  },
+  {
+   "value": "scene.mancave_frost",
+   "label": "Frost"
+  },
+  {
+   "value": "scene.mancave_golden_hour",
+   "label": "Golden Hour"
+  },
+  {
+   "value": "scene.mancave_moonlight",
+   "label": "Moonlight"
+  },
+  {
+   "value": "scene.mancave_storm",
+   "label": "Storm"
+  },
+  {
+   "value": "scene.mancave_sunset",
+   "label": "Sunset"
+  }
+ ]
+}

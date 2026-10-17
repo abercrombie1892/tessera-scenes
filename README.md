@@ -7,7 +7,7 @@ work.
 ## Set up
 
 1. In Tessera, Plugins, add this repository by its link and choose your screen. The screen builds once.
-2. In Layout, add the tile **Scene / Light** from the library (search for it) and choose the scene or the light under Entity.
+2. In Layout, add the tile **Scene / Light** from the library (search for it). Choose the **room**, then the **scene**: the list shows only the scenes of that room.
 3. Optional: "Own colours" takes up to three colours as `#RRGGBB`, separated by commas.
 
 ## Good to know
@@ -15,3 +15,9 @@ work.
 - The colours of the Hue scenes of the kitchen are kept in `components/tessera_scenes/scene_colors.h`, by entity id,
   as the Hue bridge has them. A scene that is not there gets two hues from its name until it is added.
 - A light takes its own colour; one that is off is dimmed.
+
+## Privacy
+
+The Tessera app fetches the list of a room's scenes (`scenes/<room>.json`) from `raw.githubusercontent.com`, a public
+file of this repository; GitHub sees the request, nothing of your home. The screen never connects to the internet for
+this plugin. A tap starts the scene through Home Assistant.

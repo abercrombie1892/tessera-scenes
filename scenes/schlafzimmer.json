@@ -1,0 +1,48 @@
+{
+ "items": [
+  {
+   "value": "scene.schlafzimmer_energie_tanken",
+   "label": "Energie tanken"
+  },
+  {
+   "value": "scene.schlafzimmer_entspannen",
+   "label": "Entspannen"
+  },
+  {
+   "value": "scene.schlafzimmer_fruhlingsbluten",
+   "label": "Frühlingsblüten"
+  },
+  {
+   "value": "scene.schlafzimmer_gedimmt",
+   "label": "Gedimmt"
+  },
+  {
+   "value": "scene.schlafzimmer_hell",
+   "label": "Hell"
+  },
+  {
+   "value": "scene.schlafzimmer_konzentrieren",
+   "label": "Konzentrieren"
+  },
+  {
+   "value": "scene.schlafzimmer_lesen",
+   "label": "Lesen"
+  },
+  {
+   "value": "scene.schlafzimmer_nachtlicht",
+   "label": "Nachtlicht"
+  },
+  {
+   "value": "scene.schlafzimmer_nordlichter",
+   "label": "Nordlichter"
+  },
+  {
+   "value": "scene.schlafzimmer_sonnenuntergang_savanne",
+   "label": "Savanne"
+  },
+  {
+   "value": "scene.schlafzimmer_tropendammerung",
+   "label": "Tropendämmerung"
+  }
+ ]
+}

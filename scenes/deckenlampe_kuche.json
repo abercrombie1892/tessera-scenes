@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "value": "scene.deckenlampe_kuche_energie_tanken",
+   "label": "Energie tanken"
+  },
+  {
+   "value": "scene.deckenlampe_kuche_entspannen",
+   "label": "Entspannen"
+  },
+  {
+   "value": "scene.deckenlampe_kuche_gedimmt",
+   "label": "Gedimmt"
+  },
+  {
+   "value": "scene.deckenlampe_kuche_hell",
+   "label": "Hell"
+  },
+  {
+   "value": "scene.deckenlampe_kuche_konzentrieren",
+   "label": "Konzentrieren"
+  },
+  {
+   "value": "scene.deckenlampe_kuche_lesen",
+   "label": "Lesen"
+  },
+  {
+   "value": "scene.deckenlampe_kuche_nachtlicht",
+   "label": "Nachtlicht"
+  }
+ ]
+}

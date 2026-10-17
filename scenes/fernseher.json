@@ -1,0 +1,20 @@
+{
+ "items": [
+  {
+   "value": "scene.fernseher_blue_planet",
+   "label": "Blue Planet"
+  },
+  {
+   "value": "scene.fernseher_meriete",
+   "label": "Meriete"
+  },
+  {
+   "value": "scene.fernseher_singapore",
+   "label": "Singapore"
+  },
+  {
+   "value": "scene.fernseher_tokio",
+   "label": "Tokio"
+  }
+ ]
+}

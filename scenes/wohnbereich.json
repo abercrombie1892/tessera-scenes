@@ -1,0 +1,56 @@
+{
+ "items": [
+  {
+   "value": "scene.wohnbereich_abschalten",
+   "label": "Abschalten"
+  },
+  {
+   "value": "scene.wohnbereich_aufgehen",
+   "label": "Aufgehen"
+  },
+  {
+   "value": "scene.wohnbereich_bergbrise",
+   "label": "Bergbrise"
+  },
+  {
+   "value": "scene.wohnbereich_bernsteinblute",
+   "label": "Bernsteinblüte"
+  },
+  {
+   "value": "scene.wohnbereich_blaue_lagune",
+   "label": "Blaue Lagune"
+  },
+  {
+   "value": "scene.wohnbereich_glanz",
+   "label": "Glanz"
+  },
+  {
+   "value": "scene.wohnbereich_glanz_und_glamour",
+   "label": "Glanz und Glamour"
+  },
+  {
+   "value": "scene.wohnbereich_goldene_stunden_2",
+   "label": "Goldene Stunden 2"
+  },
+  {
+   "value": "scene.wohnbereich_marchenbuch",
+   "label": "Märchenbuch"
+  },
+  {
+   "value": "scene.wohnbereich_nachts",
+   "label": "Nachts"
+  },
+  {
+   "value": "scene.wohnbereich_schlafrig",
+   "label": "Schläfrig"
+  },
+  {
+   "value": "scene.wohnbereich_trick_or_treat",
+   "label": "Trick or treat"
+  },
+  {
+   "value": "scene.wohnbereich_winterlicher_berg",
+   "label": "Winterlicher Berg"
+  }
+ ]
+}

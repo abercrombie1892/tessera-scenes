@@ -2,12 +2,14 @@
 # colours of the scene (from the Hue bridge, kept in the plugin by the scene's entity id) or of the light. A tap starts
 # the scene or switches the light.
 id: tessera_scenes
-version: 0.4.0
+version: 0.5.0
 api: "0.8"
 icon: lightbulb
 maintainer: abercrombie1892
 license: MIT
 stage: beta
+privacy: https://github.com/abercrombie1892/tessera-scenes#privacy
+attributes: [cloud]
 topics: [home]
 requires:
   esphome: 2026.6.2
@@ -16,8 +18,10 @@ boards: [wavesharep4, jc8012p4a1, jc8012p4a1v2, jc8012p4a1v3]
 flash_kb: 40
 
 permissions:
-  # A tap on a scene tile starts the scene, on a light tile it switches the light.
-  home_assistant_actions: [scene.turn_on, light.toggle]
+  # The list of a room's scenes, a small file of this repository.
+  network: [raw.githubusercontent.com]
+  # A tap on a scene tile starts the scene.
+  home_assistant_actions: [scene.turn_on]
 
 tiles:
   - id: scene
@@ -25,9 +29,23 @@ tiles:
     icon: lightbulb
     sizes: { min: 1x1, max: 4x4 }
     memory: 900
-    domains: [scene, light]
-    attributes: [brightness, rgb_color]
     example: scene_example
-    preview: { title: "{name}" }
     options:
+      # First the room, then only its scenes: the list of scenes is the file of the chosen room.
+      - id: room
+        kind: choice
+        label: room
+        hint: room_hint
+        default: kuche
+        choices: [{ value: deckenlampe_kuche, label: room_deckenlampe_kuche }, { value: emma, label: room_emma }, { value: fernseher, label: room_fernseher }, { value: gaming, label: room_gaming }, { value: gastebad, label: room_gastebad }, { value: kinderzimmer, label: room_kinderzimmer }, { value: kinderzimmer_emma, label: room_kinderzimmer_emma }, { value: kinderzimmer_pepe, label: room_kinderzimmer_pepe }, { value: kreativ, label: room_kreativ }, { value: kuche, label: room_kuche }, { value: mancave, label: room_mancave }, { value: pepe, label: room_pepe }, { value: schlafzimmer, label: room_schlafzimmer }, { value: sideboard, label: room_sideboard }, { value: wohnbereich, label: room_wohnbereich }, { value: wohnzimmer, label: room_wohnzimmer }]
+      - { id: scene, kind: choice, options_from: scenes, label: scene, hint: scene_hint }
       - { id: colors, kind: text, label: colors, hint: colors_hint }
+
+fetch:
+  - id: scenes
+    url: https://raw.githubusercontent.com/abercrombie1892/tessera-scenes/main/scenes/{room}.json
+    every: 1d
+    map:
+      items: "$.items[*]"
+      value: value
+      label: label

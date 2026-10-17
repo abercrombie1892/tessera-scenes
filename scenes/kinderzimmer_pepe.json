@@ -1,0 +1,76 @@
+{
+ "items": [
+  {
+   "value": "scene.kinderzimmer_pepe_bernsteinblute",
+   "label": "Bernsteinblüte"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_energie_tanken",
+   "label": "Energie tanken"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_entspannen",
+   "label": "Entspannen"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_fruhlingsbluten",
+   "label": "Frühlingsblüten"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_gemalter_himmel",
+   "label": "Gemalter Himmel"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_konzentrieren",
+   "label": "Konzentrieren"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_lesen",
+   "label": "Lesen"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_memento",
+   "label": "Memento"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_nachtlicht",
+   "label": "Nachtlicht"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_nordlichter",
+   "label": "Nordlichter"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_ruhephase",
+   "label": "Ruhephase"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_sonnenuntergang_savanne",
+   "label": "Savanne"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_soho",
+   "label": "Soho"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_trick_or_treat",
+   "label": "Trick or treat"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_tropendammerung",
+   "label": "Tropendämmerung"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_tropendammerung_2",
+   "label": "Tropendämmerung 2"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_waldabenteuer",
+   "label": "Wald"
+  },
+  {
+   "value": "scene.kinderzimmer_pepe_winterschonheit",
+   "label": "Winterschönheit"
+  }
+ ]
+}

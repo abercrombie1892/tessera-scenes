@@ -1,0 +1,88 @@
+{
+ "items": [
+  {
+   "value": "scene.kuche_aktivieren",
+   "label": "Aktivieren"
+  },
+  {
+   "value": "scene.kuche_bernsteinblute",
+   "label": "Bernsteinblüte"
+  },
+  {
+   "value": "scene.kuche_entspannen",
+   "label": "Entspannen"
+  },
+  {
+   "value": "scene.kuche_fruhlingsbluten",
+   "label": "Frühlingsblüten"
+  },
+  {
+   "value": "scene.kuche_gedimmt",
+   "label": "Gedimmt"
+  },
+  {
+   "value": "scene.kuche_gemalter_himmel",
+   "label": "Gemalter Himmel"
+  },
+  {
+   "value": "scene.kuche_hell",
+   "label": "Hell"
+  },
+  {
+   "value": "scene.kuche_kochen",
+   "label": "Kochen"
+  },
+  {
+   "value": "scene.kuche_konzentration",
+   "label": "Konzentration"
+  },
+  {
+   "value": "scene.kuche_lesen",
+   "label": "Lesen"
+  },
+  {
+   "value": "scene.kuche_hue_lily",
+   "label": "Lily"
+  },
+  {
+   "value": "scene.kuche_miami",
+   "label": "Miami"
+  },
+  {
+   "value": "scene.kuche_miami_2",
+   "label": "Miami 2"
+  },
+  {
+   "value": "scene.kuche_nachtlicht",
+   "label": "Nachtlicht"
+  },
+  {
+   "value": "scene.kuche_nordlichter",
+   "label": "Nordlichter"
+  },
+  {
+   "value": "scene.kuche_sonnenuntergang_savanne",
+   "label": "Savanne"
+  },
+  {
+   "value": "scene.kuche_tropendammerung",
+   "label": "Tropendämmerung"
+  },
+  {
+   "value": "scene.kuche_vapor_wave",
+   "label": "Vapor Wave"
+  },
+  {
+   "value": "scene.kuche_waldabenteuer",
+   "label": "Wald"
+  },
+  {
+   "value": "scene.kuche_waldabenteuer_2",
+   "label": "Wald 2"
+  },
+  {
+   "value": "scene.kuche_winterschonheit",
+   "label": "Winterschönheit"
+  }
+ ]
+}

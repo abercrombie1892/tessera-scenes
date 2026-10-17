@@ -1,0 +1,24 @@
+{
+ "items": [
+  {
+   "value": "scene.pepe_kaminfeuer",
+   "label": "Kaminfeuer"
+  },
+  {
+   "value": "scene.pepe_kerzenschein",
+   "label": "Kerzenschein"
+  },
+  {
+   "value": "scene.pepe_mitternachtsstille",
+   "label": "Mitternachtsstille"
+  },
+  {
+   "value": "scene.pepe_mondlicht",
+   "label": "Mondlicht"
+  },
+  {
+   "value": "scene.pepe_warmes_abendrot",
+   "label": "Warmes Abendrot"
+  }
+ ]
+}

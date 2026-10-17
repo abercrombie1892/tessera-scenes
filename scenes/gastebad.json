@@ -1,0 +1,32 @@
+{
+ "items": [
+  {
+   "value": "scene.gastebad_fruhlingsbluten",
+   "label": "Frühlingsblüten"
+  },
+  {
+   "value": "scene.gastebad_gedimmt",
+   "label": "Gedimmt"
+  },
+  {
+   "value": "scene.gastebad_hell",
+   "label": "Hell"
+  },
+  {
+   "value": "scene.gastebad_nachtlicht",
+   "label": "Nachtlicht"
+  },
+  {
+   "value": "scene.gastebad_nordlichter",
+   "label": "Nordlichter"
+  },
+  {
+   "value": "scene.gastebad_sonnenuntergang_savanne",
+   "label": "Savanne"
+  },
+  {
+   "value": "scene.gastebad_tropendammerung",
+   "label": "Tropendämmerung"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "items": [
+  {
+   "value": "scene.kreativ_chill",
+   "label": "Chill"
+  },
+  {
+   "value": "scene.kreativ_focus",
+   "label": "Focus"
+  },
+  {
+   "value": "scene.kreativ_gemuetlich",
+   "label": "Gemuetlich"
+  },
+  {
+   "value": "scene.kreativ_ocean",
+   "label": "Ocean"
+  },
+  {
+   "value": "scene.kreativ_sunset",
+   "label": "Sunset"
+  }
+ ]
+}
