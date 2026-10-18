@@ -2,7 +2,7 @@
 # colours of the scene (from the Hue bridge, kept in the plugin by the scene's entity id) or of the light. A tap starts
 # the scene or switches the light.
 id: tessera_scenes
-version: 0.5.0
+version: 0.5.1
 api: "0.8"
 icon: lightbulb
 maintainer: abercrombie1892
@@ -37,7 +37,7 @@ tiles:
         label: room
         hint: room_hint
         default: kuche
-        choices: [{ value: deckenlampe_kuche, label: room_deckenlampe_kuche }, { value: emma, label: room_emma }, { value: fernseher, label: room_fernseher }, { value: gaming, label: room_gaming }, { value: gastebad, label: room_gastebad }, { value: kinderzimmer, label: room_kinderzimmer }, { value: kinderzimmer_emma, label: room_kinderzimmer_emma }, { value: kinderzimmer_pepe, label: room_kinderzimmer_pepe }, { value: kreativ, label: room_kreativ }, { value: kuche, label: room_kuche }, { value: mancave, label: room_mancave }, { value: pepe, label: room_pepe }, { value: schlafzimmer, label: room_schlafzimmer }, { value: sideboard, label: room_sideboard }, { value: wohnbereich, label: room_wohnbereich }, { value: wohnzimmer, label: room_wohnzimmer }]
+        choices: [{ value: badezimmer, label: room_badezimmer }, { value: deckenlampe_kuche, label: room_deckenlampe_kuche }, { value: emma, label: room_emma }, { value: fernseher, label: room_fernseher }, { value: gaming, label: room_gaming }, { value: gastebad, label: room_gastebad }, { value: kinderzimmer, label: room_kinderzimmer }, { value: kinderzimmer_emma, label: room_kinderzimmer_emma }, { value: kinderzimmer_pepe, label: room_kinderzimmer_pepe }, { value: kreativ, label: room_kreativ }, { value: kuche, label: room_kuche }, { value: mancave, label: room_mancave }, { value: pepe, label: room_pepe }, { value: schlafzimmer, label: room_schlafzimmer }, { value: sideboard, label: room_sideboard }, { value: wohnbereich, label: room_wohnbereich }, { value: wohnzimmer, label: room_wohnzimmer }]
       - { id: scene, kind: choice, options_from: scenes, label: scene, hint: scene_hint }
       - { id: colors, kind: text, label: colors, hint: colors_hint }
 

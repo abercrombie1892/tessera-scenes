@@ -10,6 +10,7 @@
     "scene_example": "Miami",
     "colors": "Own colours",
     "colors_hint": "Empty: the colours of the scene (from the Hue bridge) or of the light. Otherwise up to three colours as #RRGGBB, separated by commas: #3848FE, #FE6EBC.",
+    "room_badezimmer": "Badezimmer",
     "room_deckenlampe_kuche": "Deckenlampe Küche",
     "room_emma": "Emma",
     "room_fernseher": "Fernseher",

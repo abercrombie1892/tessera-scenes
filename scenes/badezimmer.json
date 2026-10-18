@@ -1,0 +1,64 @@
+{
+ "items": [
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_abschalten",
+   "label": "Abschalten"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_aufgehen",
+   "label": "Aufgehen"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_glanz",
+   "label": "Glanz"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_goldene_stunden_2",
+   "label": "Goldene Stunden 2"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_hell",
+   "label": "Hell"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_honolulu",
+   "label": "Honolulu"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_konzentrieren",
+   "label": "Konzentrieren"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_memento",
+   "label": "Memento"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_miami",
+   "label": "Miami"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_marchenbuch",
+   "label": "Märchenbuch"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_nachts",
+   "label": "Nachts"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_scharlachroter_traum",
+   "label": "Scharlachroter Traum"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_schlafrig",
+   "label": "Schläfrig"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_smaragdahnliches_flackern",
+   "label": "Smaragdähnliches Flackern"
+  },
+  {
+   "value": "scene.badezimmer_hauptlicht_hue_strahlend",
+   "label": "Strahlend"
+  }
+ ]
+}

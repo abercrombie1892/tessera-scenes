@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.1
+- New room Badezimmer with its fifteen Hue scenes and their colours.
+
 ## 0.5.0
 - The tile picks its scene in two steps: first the room (a list of every room of the house), then only the scenes of
   that room. The list of scenes is a small file of this repository (`scenes/<room>.json`), fetched by the Tessera app.
